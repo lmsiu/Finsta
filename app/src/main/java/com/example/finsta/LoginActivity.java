@@ -17,8 +17,8 @@ import com.parse.ParseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText etusername, etpassword;
-    Button btnlogin;
+    private EditText etusername, etpassword;
+    private Button btnlogin, btnsignup;
 
 
 
@@ -35,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         etusername = findViewById(R.id.tvusername);
         etpassword = findViewById(R.id.etPassword);
         btnlogin = findViewById(R.id.btnlogin);
+        btnsignup = findViewById(R.id.btngosignup);
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +46,15 @@ public class LoginActivity extends AppCompatActivity {
                 loginUser(username, password);
             }
         });
+
+        btnsignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("LOGINACTIVITY", "onSignUpClick");
+                goSignUp();
+            }
+        });
+
 
     }
 
@@ -58,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 goMainActivity();
-                Toast.makeText(LoginActivity.this, "Success!", Toast.LENGTH_SHORT);
+                Toast.makeText(LoginActivity.this, "Success!", Toast.LENGTH_SHORT).show();
                 
 
             }
@@ -67,6 +77,12 @@ public class LoginActivity extends AppCompatActivity {
 
     private void goMainActivity() {
         Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+        finish();
+    }
+
+    private void goSignUp() {
+        Intent i = new Intent(this, SignUp.class);
         startActivity(i);
         finish();
     }

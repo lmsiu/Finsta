@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Finsta</string>
-    <string name="username">Finsta</string>
-    <string name="password">Finsta</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
 </resources>

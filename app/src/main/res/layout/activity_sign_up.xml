@@ -4,24 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
-
-    <Button
-        android:id="@+id/btnlogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etPassword"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="160dp"
-        android:text="Login" />
+    tools:context=".SignUp">
 
     <EditText
-        android:id="@+id/tvusername"
+        android:id="@+id/etnewusername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
@@ -30,25 +19,23 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/etnewpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvusername"
+        android:layout_below="@+id/etnewusername"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
         android:ems="10"
-        android:hint="@string/password"
-        android:inputType="textPassword" />
+        android:hint="@string/password" />
 
     <Button
-        android:id="@+id/btngosignup"
+        android:id="@+id/btnsignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/etnewpassword"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="144dp"
-        android:layout_marginBottom="5dp"
-        android:text="New? Sign up!" />
-
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="162dp"
+        android:text="Sign up" />
 </RelativeLayout>
